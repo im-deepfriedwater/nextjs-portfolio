@@ -6,6 +6,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  overflow:hidden
 }
 
 @media (prefers-color-scheme: dark) {
@@ -39,6 +40,7 @@
   font-size: 2rem;
   text-decoration: none;
   margin-left: 1rem;
+  user-select: none;
 }
 
 .rightHeader {
@@ -72,4 +74,14 @@
 /* Hide the link that should open and close the topnav on small screens */
 .topnav .icon {
   display: none;
+}
+
+.unityContainer {
+  width: 100%;
+  min-height: 94.5vh;
+  display: flex;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+
 }
