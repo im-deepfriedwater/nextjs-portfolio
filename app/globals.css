@@ -7,6 +7,7 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
   overflow:hidden
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -78,10 +79,9 @@
 
 .unityContainer {
   width: 100%;
-  min-height: 94.5vh;
+  min-height: 90vh;
   display: flex;
   background-color: white;
   justify-content: center;
   align-items: center;
-
 }
