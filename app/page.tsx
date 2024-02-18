@@ -1,5 +1,8 @@
+"use client"
+
 import { Silkscreen } from 'next/font/google'
 import UnityApp from './unity/unityapp';
+import { Unity, useUnityContext } from 'react-unity-webgl';
 
 const silkscreen = Silkscreen({
   weight: '400',
@@ -7,6 +10,13 @@ const silkscreen = Silkscreen({
 });
 
 export default function Home() {
+  const { unityProvider, loadingProgression, isLoaded } = useUnityContext({
+    loaderUrl: "build/myunityapp.loader.js",
+    dataUrl: "build/myunityapp.data",
+    frameworkUrl: "build/myunityapp.framework.js",
+    codeUrl: "build/myunityapp.wasm",
+  });
+  
   return (
     <div className="main">
       <div className={`topnav ${silkscreen.className}`} id="myTopnav">
@@ -21,7 +31,20 @@ export default function Home() {
       </div>
       
       <div className="unityContainer">
-        <UnityApp />
+        { !isLoaded && (
+          <div className={`loadingContainer ${silkscreen.className}`}>
+            <p>
+              Loading... {Math.round(loadingProgression * 100)}%
+            </p>
+          </div>
+        )}
+        <Unity 
+          unityProvider={unityProvider} 
+          style={{ 
+            width: "100%", 
+            height: "100%", 
+            visibility: isLoaded ? "visible" : "hidden"}} 
+        />;
       </div>
     </div>
 

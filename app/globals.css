@@ -84,4 +84,18 @@
   background-color: white;
   justify-content: center;
   align-items: center;
+  flex-grow: 0;
+}
+
+.loadingContainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loadingContainer > p {
+  font-size: 2rem;
+  text-align: center;
 }
