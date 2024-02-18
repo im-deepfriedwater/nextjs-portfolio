@@ -1,7 +1,6 @@
 "use client"
 
 import { Silkscreen } from 'next/font/google'
-import UnityApp from './unity/unityapp';
 import { Unity, useUnityContext } from 'react-unity-webgl';
 
 const silkscreen = Silkscreen({
@@ -11,10 +10,10 @@ const silkscreen = Silkscreen({
 
 export default function Home() {
   const { unityProvider, loadingProgression, isLoaded } = useUnityContext({
-    loaderUrl: "build/myunityapp.loader.js",
-    dataUrl: "build/myunityapp.data",
-    frameworkUrl: "build/myunityapp.framework.js",
-    codeUrl: "build/myunityapp.wasm",
+    loaderUrl: "build/public.loader.js",
+    dataUrl: "build/public.data",
+    frameworkUrl: "build/public.framework.js",
+    codeUrl: "build/public.wasm",
   });
   
   return (
@@ -43,7 +42,8 @@ export default function Home() {
           style={{ 
             width: "100%", 
             height: "100%", 
-            visibility: isLoaded ? "visible" : "hidden"}} 
+            visibility: isLoaded ? "visible" : "hidden",
+          }} 
         />;
       </div>
     </div>
