@@ -1,0 +1,12 @@
+.navBar {
+  background-color: #FF6961;
+  display: flex;
+  height: 12%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navBar > label {
+  font-size: 1rem;
+}

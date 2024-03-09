@@ -1,0 +1,11 @@
+.promoBar {
+  background-color: #F1F7ED;
+  display: flex;
+  height: 8.5%;
+  justify-content: center;
+  align-items: center;
+}
+
+.promoBar > label {
+  font-size: 1rem;
+}

@@ -2,6 +2,7 @@
 
 import { Silkscreen } from 'next/font/google'
 import { Unity, useUnityContext } from 'react-unity-webgl';
+import styles from './mainPage.module.css';
 
 const silkscreen = Silkscreen({
   weight: '400',
@@ -17,10 +18,10 @@ export default function Home() {
   });
    
   return (
-    <div className="main">      
-      <div className="unityContainer">
+    <div className={`${styles.main}`}>      
+      <div className={`${styles.unityContainer}`}>
         { !isLoaded && (
-          <div className={`loadingContainer ${silkscreen.className}`}>
+          <div className={`${styles.loadingContainer} ${silkscreen.className}`}>
             <p>
               Loading... {Math.round(loadingProgression * 100)}%
             </p>
