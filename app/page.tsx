@@ -24,7 +24,7 @@ export default function Home() {
         </div>
         <div className="rightHeader">
           <a href="https://www.linkedin.com/in/justin-torres/" target="_blank">LinkedIn</a>
-          <a href="/justinkyletorres2024_resume.pdf" target="_blank">Resume</a>
+          <a href="/JustinKyleTorresResume.pdf" target="_blank">Resume</a>
           <a href="https://github.com/im-deepfriedwater" target="_blank">Github</a>
         </div>
       </div>
