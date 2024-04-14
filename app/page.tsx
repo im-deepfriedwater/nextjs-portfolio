@@ -26,6 +26,7 @@ export default function Home() {
           <a href="https://www.linkedin.com/in/justin-torres/" target="_blank">LinkedIn</a>
           <a href="/JustinKyleTorresResume.pdf" target="_blank">Resume</a>
           <a href="https://github.com/im-deepfriedwater" target="_blank">Github</a>
+          <a href="https://imdeepfriedwater.itch.io/" target="_blank">itch.io</a>
         </div>
       </div>
       
